@@ -1,0 +1,11 @@
+node_modules/
+.next*/
+out/
+.env*
+!.env.example
+*.log
+*.tsbuildinfo
+next-env.d.ts
+AGENTS.md
+qa-artifacts/
+postman/.dependencies/

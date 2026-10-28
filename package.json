@@ -1,0 +1,37 @@
+{
+  "name": "rag-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack --hostname 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "dev:qa": "RAG_API_URL=http://127.0.0.1:4900/rag RAG_ADMIN_TOKEN=qa-admin-token RAG_SERVICE_TOKEN=qa-service-token NEXT_BUILD_DIR=.next-qa next dev --webpack --hostname 127.0.0.1 --port 3002",
+    "qa:api": "postman simulation run postman/simulations/admin-qa.sim.yaml --port 4900 --no-history"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jose": "^6.0.0",
+    "lucide-react": "^0.468.0",
+    "next": "^16.0.0",
+    "next-themes": "^0.4.6",
+    "radix-ui": "^1.8.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "^0.0.1",
+    "sonner": "^2.0.0",
+    "tailwind-merge": "^3.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "tw-animate-css": "^1.0.0",
+    "typescript": "^5.9.0"
+  }
+}

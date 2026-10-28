@@ -1,0 +1,6 @@
+simulation: admin-qa
+routing: path
+mocks:
+  - name: rag-api
+    routeKey: rag
+    path: postman/mocks/rag-api/config.yaml
